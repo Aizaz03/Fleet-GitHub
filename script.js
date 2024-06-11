@@ -20,3 +20,15 @@ document.addEventListener("DOMContentLoaded", function () {
   tabs[0].classList.add("tab-active");
   contents[0].classList.add("content-active");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.25, // Default number of slides per view
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
