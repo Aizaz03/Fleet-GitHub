@@ -513,6 +513,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 18.25rem;
 }
 .adventure-section .adventure-listing swiper-slide .adventure {
   display: flex;
