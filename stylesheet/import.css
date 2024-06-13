@@ -1134,4 +1134,8 @@ body {
   .calm-journey .listing swiper-slide:nth-child(3n) {
     width: 22rem;
   }
+}
+
+.swiper-button-next {
+  display: none !important;
 }/*# sourceMappingURL=import.css.map */
