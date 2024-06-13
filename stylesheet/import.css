@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 2.25rem 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    margin: 1.5rem 5rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .header {
+    margin: 1.5rem 10rem;
+  }
+}
+.header .image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2.5rem;
+}
+.header .image-wrapper img {
+  width: 5.875rem;
+  height: 2rem;
+}
+.header .image-wrapper p {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 0.0625rem solid #e6e8ec;
+  padding-left: 2.5rem;
+  font-family: "DM Sans", sans-serif;
+  display: none;
+}
+@media screen and (min-width: 64rem) {
+  .header .image-wrapper p {
+    display: flex;
+  }
+}
+.header .image-wrapper p img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.header .menu-listing {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header .menu-listing ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+  display: none;
+}
+@media screen and (min-width: 90rem) {
+  .header .menu-listing ul {
+    display: flex;
+  }
+}
+.header .menu-listing ul li {
+  list-style: none;
+}
+.header .menu-listing ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.75rem;
+  color: #777e90;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+}
+.header .menu-listing ul li a img {
+  height: 1rem;
+  width: 1rem;
+}
+.header .menu-listing button {
+  color: #23262f;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0;
+  padding: 0.625rem 0.9375rem;
+  border: 2px solid #e6e8ec;
+  border-radius: 5.625rem;
+  background: transparent;
+  display: none;
+}
+@media screen and (min-width: 64rem) {
+  .header .menu-listing button {
+    display: block;
+  }
+}
+.header .menu-listing .img-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+.header .menu-listing .img-wrapper img {
+  position: relative;
+}
+.header .menu-listing .img-wrapper img:nth-child(1) {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.header .menu-listing .img-wrapper img:nth-child(1)::after {
+  content: "";
+  background-color: green;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.header .menu-listing .img-wrapper img:nth-child(2) {
+  height: 2rem;
+  width: 2rem;
+}
+.header .menu-listing .img-wrapper img:nth-child(3) {
+  height: 2rem;
+  width: 2rem;
+}
+@media screen and (min-width: 64rem) {
+  .header .menu-listing .img-wrapper img:nth-child(3) {
+    display: none;
+  }
+}
+
+.main {
+  margin: 0 1rem;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  .main {
+    background-image: url(../Assets/Images/hero-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
+    height: 37.5rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .main {
+    background-image: url(../Assets/Images/hero-banner-2.png);
+    height: 38.125rem;
+    margin: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main {
+    height: 48.5rem;
+    margin: 0 5rem;
+  }
+}
+.main .booking {
+  background: linear-gradient(180deg, #f4f5f6 87.16%, rgba(244, 245, 246, 0) 137.55%);
+  border-radius: 24px 24px 0 0;
+}
+@media screen and (min-width: 48rem) {
+  .main .booking {
+    background: none;
+  }
+}
+.main .booking .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem 1rem 3.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .main .booking .content {
+    padding: 10rem 1rem 3.12rem;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .main .booking .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1re;
+    max-width: 27.9375rem;
+    width: 100%;
+    padding: 6.125rem 0 0 80px;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main .booking .content {
+    padding: 9rem 0 0 80px;
+  }
+}
+.main .booking .content h1 {
+  color: #23262f;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: -0.125rem;
+  font-family: "DM Sans", sans-serif;
+}
+@media screen and (min-width: 48rem) {
+  .main .booking .content h1 {
+    color: #fff;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .main .booking .content h1 {
+    color: #23262f;
+    text-align: left;
+  }
+}
+.main .booking .content p {
+  font-family: "DM Sans", sans-serif;
+  color: #23262f;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 0;
+}
+@media screen and (min-width: 48rem) {
+  .main .booking .content p {
+    color: #fff;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .main .booking .content p {
+    color: #23262f;
+  }
+}
+.main .booking .content button {
+  color: #fcfcfd;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0;
+  background-color: #3b71fe;
+  padding: 14px 1.5rem;
+  border: none;
+  border-radius: 5.625rem;
+  margin-top: 0.5rem;
+}
+.main .hero-banner {
+  background-image: url(../Assets/Images/hero-banner.png);
+  position: absolute;
+  top: 15.625rem;
+  background-size: cover;
+  height: 35.375rem;
+  z-index: -1;
+  width: 100%;
+  border-radius: 0 0 23px 23px;
+  background-position: center;
+}
+@media screen and (min-width: 48rem) {
+  .main .hero-banner {
+    background-image: none;
+    position: initial;
+  }
+}
+.main .hero-banner .tab-listing {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  right: 0.25rem;
+  background: linear-gradient(83.59deg, #fcfcfd 36.52%, rgba(252, 252, 253, 0.83) 98.8%);
+  padding: 1.25rem;
+  border-radius: 20px;
+}
+@media screen and (min-width: 64rem) {
+  .main .hero-banner .tab-listing {
+    max-width: 54rem;
+    margin: 0 auto;
+    box-shadow: 0px 40px 64px -32px rgba(15, 15, 15, 0.1019607843);
+    padding: 2.5rem;
+    bottom: -5.3125rem;
+    background: linear-gradient(89.59deg, #fcfcfd 36.52%, rgb(252, 252, 253) 98.8%);
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main .hero-banner .tab-listing {
+    max-width: 70rem;
+  }
+}
+.main .hero-banner .tab-listing .tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid #e6e8ec;
+}
+@media screen and (min-width: 64rem) {
+  .main .hero-banner .tab-listing .tabs {
+    justify-content: start;
+    gap: 2.1875rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .main .hero-banner .tab-listing .tabs {
+    justify-content: start;
+    gap: 3rem;
+  }
+}
+.main .hero-banner .tab-listing .tab {
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #777e90;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0;
+  font-family: "DM Sans", "san-serif";
+}
+.main .hero-banner .tab-listing .tab-content {
+  display: none;
+  margin-top: 1.5rem;
+}
+.main .hero-banner .tab-listing .tab-content .main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 48rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing {
+    position: relative;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing {
+    gap: 0;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 64rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing .content {
+    padding: 1.4375rem 1.75rem 1.4375rem 20px;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content img {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing .content img {
+    display: flex;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content .listing h3 {
+  font-family: "poppins", "sans-serif";
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content .listing p {
+  font-family: "poppins", "sans-serif";
+  color: #777e90;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: start;
+  letter-spacing: 0;
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(2) {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(2) {
+    display: flex;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(3) {
+  display: none;
+}
+@media screen and (min-width: 64rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(3) {
+    display: flex;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(4) {
+  display: none;
+}
+@media screen and (min-width: 90rem) {
+  .main .hero-banner .tab-listing .tab-content .main-content .content-listing .content:nth-child(4) {
+    display: flex;
+  }
+}
+.main .hero-banner .tab-listing .tab-content .main-content .image-wrapper {
+  height: 4rem;
+  width: 3.9375rem;
+}
+.main .hero-banner .tab-listing .tab-content .main-content .image-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.main .hero-banner .tab-listing .tab-active {
+  color: #23262f;
+  padding-bottom: 1.875rem;
+  border-bottom: 0.125rem solid #23262f;
+}
+.main .hero-banner .tab-listing .content-active {
+  display: block;
+}/*# sourceMappingURL=import.css.map */
