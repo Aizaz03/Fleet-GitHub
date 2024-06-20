@@ -893,8 +893,6 @@ body {
       border-radius: 90px;
       width: 8.25rem;
       cursor: pointer;
-      img {
-      }
       input {
         background: transparent;
         border: none;
@@ -1919,18 +1917,45 @@ body {
 footer {
   border-top: 0.0625rem solid $lightGrey;
   margin-top: 4rem;
+  padding: 4rem 2rem 1.5rem;
+  @media screen and (min-width: 64rem) {
+    max-width: 54rem;
+    width: 100%;
+    margin: 4rem auto 0;
+    padding: 4rem 0 0 0;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 70rem;
+  }
   .footer-listing {
     @include flex(start, start, 3rem, column);
-    padding: 4rem 2rem 1.5rem;
-    .image-wrapper {
-      img {
-      }
+
+    @media screen and (min-width: 48rem) {
+      @include flex(start, start, 1rem);
+    }
+    @media screen and (min-width: 90rem) {
+      @include flex(space-between, start, 1rem);
     }
     .menu-listing {
       @include flex(space-between, start, 10px);
       width: 100%;
+
+      @media screen and (min-width: 48rem) {
+        @include flex(space-around, start, 1rem);
+      }
+      @media screen and (min-width: 64rem) {
+        @include flex(start, start, 2.75rem);
+        margin-left: 8.125rem;
+      }
+      @media screen and (min-width: 90rem) {
+        @include flex(space-evenly, start, 2.75rem);
+        margin-left: 0;
+      }
       .main-menu {
         @include flex(start, start, 32px, column);
+        @media screen and (min-width: 64rem) {
+          display: none;
+        }
         li {
           list-style: none;
           a {
@@ -1943,6 +1968,54 @@ footer {
 
       .footer-menu {
         @include flex(start, start, 32px, column);
+        @media screen and (min-width: 64rem) {
+          display: none;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .about-us {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .press {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .downloads {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
         li {
           list-style: none;
           a {
@@ -1956,6 +2029,10 @@ footer {
     .mail-form {
       width: 100%;
 
+      @media screen and (min-width: 64rem) {
+        width: fit-content;
+      }
+
       h6 {
         @include font-styles($textColor, 0.75rem, 700, 0.75rem, start, 0);
         font-family: "poppins", "sans-serif";
@@ -1968,7 +2045,7 @@ footer {
         border-radius: 5.625rem;
         width: 100%;
         @media screen and (min-width: 64rem) {
-          width: 18.75rem;
+          width: 16rem;
         }
         input {
           background: none;
@@ -1988,11 +2065,12 @@ footer {
         }
       }
     }
-    .copyright-bar {
-      p {
-        font-family: "poppins", "sans-serif";
-        @include font-styles($textColor, 0.75rem, 400, 20px, start, 0);
-      }
+  }
+  .copyright-bar {
+    margin-top: 3rem;
+    p {
+      font-family: "poppins", "sans-serif";
+      @include font-styles($textColor, 0.75rem, 400, 20px, start, 0);
     }
   }
 }
