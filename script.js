@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   // Swiper: Slider
   new Swiper(".swiper-container", {
-    loop: false,
+    loop: true,
     nextButton: ".swiper-button-nex",
     prevButton: ".swiper-button-pre",
     slidesPerView: 3,
