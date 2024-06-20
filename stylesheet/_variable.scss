@@ -9,6 +9,11 @@ $textColor: #23262f;
 $shadowColor: #0f0f0f1a;
 $secondaryTextColor: #23262f;
 $shadowColor: #0f0f0f1a;
+$colorLightBlue: #8bc5e5;
+$bgBlueColor: #92a5ef;
+$bgGreenColor: #58c27d;
+$bgCardColor: #f4f5f6;
+$primaryParagraph: #353945;
 $bgGradientColor: linear-gradient(
   180deg,
   #f4f5f6 87.16%,
@@ -23,4 +28,10 @@ $secondaryGeadient: linear-gradient(
   89.59deg,
   #fcfcfd 36.52%,
   rgba(252, 252, 253, 1) 98.8%
+);
+
+$labelGradient: linear-gradient(
+  83.59deg,
+  #fcfcfd 36.52%,
+  rgba(252, 252, 253, 0.83) 98.8%
 );

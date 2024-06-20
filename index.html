@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./stylesheet/import.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
     <title>Fleet</title>
   </head>
   <body>
@@ -200,73 +206,940 @@
       <h2>Let’s go on an adventure</h2>
       <p>Find and book a great experience.</p>
       <div class="adventure-listing">
-        <swiper-container
-          class="mySwiper"
-          space-between="30"
-          slides-per-view=""
-          pagination="true"
-          pagination-clickable="true"
-          controls="true"
-        >
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/resort.svg" alt="" />
-              <div class="content">
-                <h5>Luxury resort at the sea</h5>
-                <span>9,326 places</span>
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/resort.svg" alt="" />
+                  <div class="content">
+                    <h5>Luxury resort at the sea</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/camping.svg" alt="" />
+                  <div class="content">
+                    <h5>Camping amidst the wild</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/resort.svg" alt="" />
+                  <div class="content">
+                    <h5>Luxury resort at the sea</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/camping.svg" alt="" />
+                  <div class="content">
+                    <h5>Camping amidst the wild</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/forest.svg" alt="" />
+                  <div class="content">
+                    <h5>Camping amidst the wild</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="adventure">
+                  <img src="./Assets/svgs/resort.svg" alt="" />
+                  <div class="content">
+                    <h5>Luxury resort at the sea</h5>
+                    <span>9,326 places</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/camping.svg" alt="" />
-              <div class="content">
-                <h5>Camping amidst the wild</h5>
-                <span>9,326 places</span>
+            <div class="button-listing">
+              <div class="swiper-button-pre">
+                <img src="./Assets/svgs/arrow-left.svg" alt="" />
+              </div>
+              <div class="swiper-button-nex">
+                <img src="./Assets/svgs/arrow-right.svg" alt="" />
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/forest.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls"></div>
+    </div>
+    <div class="memories-section">
+      <h2>Travel to make memories all around the world</h2>
+      <p>Find trips that fit a flexible lifestyle</p>
+      <div class="memories">
+        <div class="memories-listing">
+          <div class="content-listing">
+            <div class="content">
+              <span>01</span>
+              <h3>Find trips that fit a flexible lifestyle</h3>
+              <p>
+                Stacks is a production-ready library of stackable content blocks
+                built in React Native
+              </p>
+            </div>
+            <div class="content">
+              <span>02</span>
+              <h3>Travel with more confidence</h3>
+              <p>
+                Stacks is a production-ready library of stackable content blocks
+                built in React Native
+              </p>
+            </div>
+            <div class="content">
+              <span>03</span>
+              <h3>See what’s really included</h3>
+              <p>
+                Stacks is a production-ready library of stackable content blocks
+                built in React Native
+              </p>
+            </div>
+            <button type="button">Start Your Search</button>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <img src="./Assets/Images/patrick-jansen.png" alt="" />
+          <div class="slider-controls">
+            <img src="./Assets/svgs/left-arrow-white.svg" alt="" />
+            <img src="./Assets/svgs/right-arrow-white.svg" alt="" />
+          </div>
+          <div class="label-listing">
+            <div class="label">
+              <img src="./Assets/Images/antonoie.png" alt="" />
               <div class="content">
-                <h5>Camping amidst the wild</h5>
-                <span>9,326 places</span>
+                <h5>Antonie Heller</h5>
+                <p><img src="./Assets/svgs/star.svg" alt="" />4.8</p>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/resort.svg" alt="" />
+            <div class="label">
+              <img src="./Assets/Images/antonoie.png" alt="" />
               <div class="content">
-                <h5>Luxury resort at the sea</h5>
-                <span>9,326 places</span>
+                <h5>Antonie Heller</h5>
+                <p><img src="./Assets/svgs/star.svg" alt="" />4.8</p>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/camping.svg" alt="" />
+            <div class="label">
+              <img src="./Assets/Images/antonoie.png" alt="" />
               <div class="content">
-                <h5>Camping amidst the wild</h5>
-                <span>9,326 places</span>
+                <h5>Antonie Heller</h5>
+                <p><img src="./Assets/svgs/star.svg" alt="" />4.8</p>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="adventure">
-              <img src="./Assets/svgs/forest.svg" alt="" />
-              <div class="content">
-                <h5>Camping amidst the wild</h5>
-                <span>9,326 places</span>
-              </div>
-            </div>
-          </swiper-slide>
-        </swiper-container>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="travel-tips">
+      <h2>How it Work</h2>
+      <p>Keep calm & travel on</p>
+      <div class="tips-listing">
+        <div class="tips">
+          <img src="./Assets/svgs/book-relax.svg" alt="" />
+          <h3>Book & Relax</h3>
+          <p>
+            We realize ideas from simple to complex, everything becomes easy to
+            use.
+          </p>
+        </div>
+        <div class="tips">
+          <img src="./Assets/svgs/smart-checklist.svg" alt="" />
+          <h3>Smart Checklist</h3>
+          <p>
+            We realize ideas from simple to complex, everything becomes easy to
+            use.
+          </p>
+        </div>
+        <div class="tips">
+          <img src="./Assets/svgs/save-more.svg" alt="" />
+          <h3>Save More</h3>
+          <p>
+            We realize ideas from simple to complex, everything becomes easy to
+            use.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="calm-journey">
+      <h2>Live Anywhere</h2>
+      <p>Keep calm & travel on</p>
+      <div class="listing">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/cold-place.png" alt="" />
+                  <h5>Enjoy the great cold</h5>
+                  <p>6,879 properties</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/early-sunrise.png" alt="" />
+                  <h5>Pick up the earliest sunrise</h5>
+                  <p>6,879 properties</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/unique-stay.png" alt="" />
+                  <h5>Unique Place</h5>
+                  <p>6,879 properties</p>
+                </div>
+              </div>
+            </div>
+            <div class="button-listing">
+              <div class="swiper-button-pre">
+                <img src="./Assets/svgs/arrow-left.svg" alt="" />
+              </div>
+              <div class="swiper-button-nex">
+                <img src="./Assets/svgs/arrow-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-button">
+          <img src="./Assets/svgs/load.svg" alt="load" />
+          <input type="button" value="load more" />
+        </div>
+      </div>
+    </div>
+    <div class="tour">
+      <h2>Go somewhere</h2>
+      <p>Let’s go on an adventure</p>
+      <div class="menu">
+        <ul>
+          <li>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.50004 13.3333C11.4456 13.3333 13.8334 10.9454 13.8334 7.99992C13.8334 5.0544 11.4456 2.66659 8.50004 2.66659C5.55452 2.66659 3.16671 5.0544 3.16671 7.99992C3.16671 10.9454 5.55452 13.3333 8.50004 13.3333ZM8.50004 14.6666C12.1819 14.6666 15.1667 11.6818 15.1667 7.99992C15.1667 4.31802 12.1819 1.33325 8.50004 1.33325C4.81814 1.33325 1.83337 4.31802 1.83337 7.99992C1.83337 11.6818 4.81814 14.6666 8.50004 14.6666Z"
+                fill="currentColor"
+              />
+              <path
+                d="M7.83337 4.66667C7.83337 4.29848 8.13185 4 8.50004 4C8.86823 4 9.16671 4.29848 9.16671 4.66667C10.2713 4.66667 11.1667 5.5621 11.1667 6.66667C11.1667 7.03486 10.8682 7.33333 10.5 7.33333C10.1319 7.33333 9.83337 7.03486 9.83337 6.66667C9.83337 6.29848 9.5349 6 9.16671 6H7.66232C7.3886 6 7.16671 6.22189 7.16671 6.49561C7.16671 6.70894 7.30321 6.89833 7.50559 6.96579L9.91613 7.7693C10.663 8.01825 11.1667 8.71716 11.1667 9.50439C11.1667 10.5145 10.3479 11.3333 9.33776 11.3333H9.16671C9.16671 11.7015 8.86823 12 8.50004 12C8.13185 12 7.83337 11.7015 7.83337 11.3333C6.7288 11.3333 5.83337 10.4379 5.83337 9.33333C5.83337 8.96514 6.13185 8.66667 6.50004 8.66667C6.86823 8.66667 7.16671 8.96514 7.16671 9.33333C7.16671 9.70152 7.46518 10 7.83337 10H9.33776C9.61148 10 9.83337 9.77811 9.83337 9.50439C9.83337 9.29106 9.69687 9.10167 9.49449 9.03421L7.08396 8.2307C6.33712 7.98176 5.83337 7.28284 5.83337 6.49561C5.83337 5.48551 6.65222 4.66667 7.66232 4.66667H7.83337Z"
+                fill="currentColor"
+              />
+            </svg>
+            <a href="#">Featured</a>
+          </li>
+          <li>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.50004 13.3333C11.4456 13.3333 13.8334 10.9454 13.8334 7.99992C13.8334 5.0544 11.4456 2.66659 8.50004 2.66659C5.55452 2.66659 3.16671 5.0544 3.16671 7.99992C3.16671 10.9454 5.55452 13.3333 8.50004 13.3333ZM8.50004 14.6666C12.1819 14.6666 15.1667 11.6818 15.1667 7.99992C15.1667 4.31802 12.1819 1.33325 8.50004 1.33325C4.81814 1.33325 1.83337 4.31802 1.83337 7.99992C1.83337 11.6818 4.81814 14.6666 8.50004 14.6666Z"
+                fill="currentColor"
+              />
+              <path
+                d="M7.83337 4.66667C7.83337 4.29848 8.13185 4 8.50004 4C8.86823 4 9.16671 4.29848 9.16671 4.66667C10.2713 4.66667 11.1667 5.5621 11.1667 6.66667C11.1667 7.03486 10.8682 7.33333 10.5 7.33333C10.1319 7.33333 9.83337 7.03486 9.83337 6.66667C9.83337 6.29848 9.5349 6 9.16671 6H7.66232C7.3886 6 7.16671 6.22189 7.16671 6.49561C7.16671 6.70894 7.30321 6.89833 7.50559 6.96579L9.91613 7.7693C10.663 8.01825 11.1667 8.71716 11.1667 9.50439C11.1667 10.5145 10.3479 11.3333 9.33776 11.3333H9.16671C9.16671 11.7015 8.86823 12 8.50004 12C8.13185 12 7.83337 11.7015 7.83337 11.3333C6.7288 11.3333 5.83337 10.4379 5.83337 9.33333C5.83337 8.96514 6.13185 8.66667 6.50004 8.66667C6.86823 8.66667 7.16671 8.96514 7.16671 9.33333C7.16671 9.70152 7.46518 10 7.83337 10H9.33776C9.61148 10 9.83337 9.77811 9.83337 9.50439C9.83337 9.29106 9.69687 9.10167 9.49449 9.03421L7.08396 8.2307C6.33712 7.98176 5.83337 7.28284 5.83337 6.49561C5.83337 5.48551 6.65222 4.66667 7.66232 4.66667H7.83337Z"
+                fill="currentColor"
+              />
+            </svg>
+            <a href="#">Family-friendly</a>
+          </li>
+          <li>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.50004 13.3333C11.4456 13.3333 13.8334 10.9454 13.8334 7.99992C13.8334 5.0544 11.4456 2.66659 8.50004 2.66659C5.55452 2.66659 3.16671 5.0544 3.16671 7.99992C3.16671 10.9454 5.55452 13.3333 8.50004 13.3333ZM8.50004 14.6666C12.1819 14.6666 15.1667 11.6818 15.1667 7.99992C15.1667 4.31802 12.1819 1.33325 8.50004 1.33325C4.81814 1.33325 1.83337 4.31802 1.83337 7.99992C1.83337 11.6818 4.81814 14.6666 8.50004 14.6666Z"
+                fill="currentColor"
+              />
+              <path
+                d="M7.83337 4.66667C7.83337 4.29848 8.13185 4 8.50004 4C8.86823 4 9.16671 4.29848 9.16671 4.66667C10.2713 4.66667 11.1667 5.5621 11.1667 6.66667C11.1667 7.03486 10.8682 7.33333 10.5 7.33333C10.1319 7.33333 9.83337 7.03486 9.83337 6.66667C9.83337 6.29848 9.5349 6 9.16671 6H7.66232C7.3886 6 7.16671 6.22189 7.16671 6.49561C7.16671 6.70894 7.30321 6.89833 7.50559 6.96579L9.91613 7.7693C10.663 8.01825 11.1667 8.71716 11.1667 9.50439C11.1667 10.5145 10.3479 11.3333 9.33776 11.3333H9.16671C9.16671 11.7015 8.86823 12 8.50004 12C8.13185 12 7.83337 11.7015 7.83337 11.3333C6.7288 11.3333 5.83337 10.4379 5.83337 9.33333C5.83337 8.96514 6.13185 8.66667 6.50004 8.66667C6.86823 8.66667 7.16671 8.96514 7.16671 9.33333C7.16671 9.70152 7.46518 10 7.83337 10H9.33776C9.61148 10 9.83337 9.77811 9.83337 9.50439C9.83337 9.29106 9.69687 9.10167 9.49449 9.03421L7.08396 8.2307C6.33712 7.98176 5.83337 7.28284 5.83337 6.49561C5.83337 5.48551 6.65222 4.66667 7.66232 4.66667H7.83337Z"
+                fill="currentColor"
+              />
+            </svg>
+            <a href="#">On Sale</a>
+          </li>
+          <li>
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.50004 13.3333C11.4456 13.3333 13.8334 10.9454 13.8334 7.99992C13.8334 5.0544 11.4456 2.66659 8.50004 2.66659C5.55452 2.66659 3.16671 5.0544 3.16671 7.99992C3.16671 10.9454 5.55452 13.3333 8.50004 13.3333ZM8.50004 14.6666C12.1819 14.6666 15.1667 11.6818 15.1667 7.99992C15.1667 4.31802 12.1819 1.33325 8.50004 1.33325C4.81814 1.33325 1.83337 4.31802 1.83337 7.99992C1.83337 11.6818 4.81814 14.6666 8.50004 14.6666Z"
+                fill="currentColor"
+              />
+              <path
+                d="M7.83337 4.66667C7.83337 4.29848 8.13185 4 8.50004 4C8.86823 4 9.16671 4.29848 9.16671 4.66667C10.2713 4.66667 11.1667 5.5621 11.1667 6.66667C11.1667 7.03486 10.8682 7.33333 10.5 7.33333C10.1319 7.33333 9.83337 7.03486 9.83337 6.66667C9.83337 6.29848 9.5349 6 9.16671 6H7.66232C7.3886 6 7.16671 6.22189 7.16671 6.49561C7.16671 6.70894 7.30321 6.89833 7.50559 6.96579L9.91613 7.7693C10.663 8.01825 11.1667 8.71716 11.1667 9.50439C11.1667 10.5145 10.3479 11.3333 9.33776 11.3333H9.16671C9.16671 11.7015 8.86823 12 8.50004 12C8.13185 12 7.83337 11.7015 7.83337 11.3333C6.7288 11.3333 5.83337 10.4379 5.83337 9.33333C5.83337 8.96514 6.13185 8.66667 6.50004 8.66667C6.86823 8.66667 7.16671 8.96514 7.16671 9.33333C7.16671 9.70152 7.46518 10 7.83337 10H9.33776C9.61148 10 9.83337 9.77811 9.83337 9.50439C9.83337 9.29106 9.69687 9.10167 9.49449 9.03421L7.08396 8.2307C6.33712 7.98176 5.83337 7.28284 5.83337 6.49561C5.83337 5.48551 6.65222 4.66667 7.66232 4.66667H7.83337Z"
+                fill="currentColor"
+              />
+            </svg>
+            <a href="#">Sub Nav</a>
+          </li>
+        </ul>
+        <div class="input-wrapper">
+          <input type="button" value="Recently Added" />
+          <img src="./Assets/svgs/dropdown.svg" alt="dropdown" />
+        </div>
+      </div>
+      <div class="button-listing">
+        <div class="input-wrapper">
+          <input type="button" value="Recently Added" />
+          <img src="./Assets/svgs/dropdown.svg" alt="dropdown" />
+        </div>
+        <div class="input-wrapper">
+          <input type="button" value="Featured" />
+          <img src="./Assets/svgs/dropdown.svg" alt="dropdown" />
+        </div>
+      </div>
+      <div class="places-listing">
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/Yasminfurt.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>Yasminfurt</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/East Barrett.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>East barret</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/steuburbery.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>Steuberbury</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/Archibaldtown.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>Karineside</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/North Edenshire.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>North Edenshire</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/Archibaldtown.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>Archibaldtown</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/Yasminfurt.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>Yasminfurt</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+        <div class="place">
+          <div class="image-wrapper">
+            <img src="./Assets/Images/East Barrett.png" alt="yasminfurt" />
+          </div>
+          <div class="content">
+            <div class="name">
+              <h5>The grand resort</h5>
+              <p>East barret</p>
+            </div>
+            <div class="price">
+              <del>$356</del>
+              <span>$247</span>
+            </div>
+          </div>
+          <hr />
+          <div class="details">
+            <h6>Tue, Jul 20 -Fri, Jul 23</h6>
+            <p><img src="./Assets/svgs/star.svg" alt="star" />4.8</p>
+          </div>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button type="button">View All</button>
+      </div>
+    </div>
+    <div class="travel-memories">
+      <div class="content">
+        <span>supercharge your planning powers</span>
+        <h2>Travel to make memories all around the world</h2>
+        <p>
+          Stacks is a production-ready library of stackable content blocks built
+          in React Native.
+        </p>
+        <div class="input-wrapper">
+          <input type="email" placeholder="Enter your phone number" />
+          <img src="./Assets/svgs/right-pointer.svg" alt="right-pointer" />
+        </div>
+      </div>
+      <div class="img-wrapper">
+        <img src="./Assets/svgs/travel-memories.svg" alt="travel-memeories" />
+      </div>
+      <div class="image-wrapper">
+        <img src="./Assets/svgs/circular-svg.svg" alt="phone" />
+      </div>
+    </div>
+    <div class="select-property">
+      <h2>Browse by property type</h2>
+      <p>Let’s go on an adventure</p>
+      <div class="card-listing">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="image-wrapper">
+                    <img
+                      src="./Assets/Images/nature-red-house.png"
+                      alt="nature house"
+                    />
+                    <span>20% off</span>
+                  </div>
+                  <h5>Enjoy the great cold</h5>
+                  <p>
+                    <img src="./Assets/svgs/home.svg" alt="home" />6,879
+                    properties
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="image-wrapper">
+                    <img
+                      src="./Assets/Images/nature-yellow-house.png"
+                      alt="nature house"
+                    />
+                    <span>20% off</span>
+                  </div>
+                  <h5>Enjoy the great cold</h5>
+                  <p>
+                    <img src="./Assets/svgs/home.svg" alt="home" />6,879
+                    properties
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="image-wrapper">
+                    <img
+                      src="./Assets/Images/nature-red-house.png"
+                      alt="nature house"
+                    />
+                    <span>20% off</span>
+                  </div>
+                  <h5>Enjoy the great cold</h5>
+                  <p>
+                    <img src="./Assets/svgs/home.svg" alt="home" />6,879
+                    properties
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="image-wrapper">
+                    <img
+                      src="./Assets/Images/nature-yellow-house.png"
+                      alt="nature house"
+                    />
+                    <span>20% off</span>
+                  </div>
+                  <h5>Enjoy the great cold</h5>
+                  <p>
+                    <img src="./Assets/svgs/home.svg" alt="home" />6,879
+                    properties
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-listing">
+            <div class="swiper-button-pre">
+              <img src="./Assets/svgs/arrow-left.svg" alt="" />
+            </div>
+            <div class="swiper-button-nex">
+              <img src="./Assets/svgs/arrow-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+      </div>
+    </div>
+    <div class="nearby-places">
+      <h2>Explore Nearby</h2>
+      <p>10,789 beautiful places to go</p>
+      <div class="card-listing">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/Thompsonbury.png"
+                    alt="Thompsonbury"
+                  />
+                  <h5>Thompsonbury</h5>
+                  <p>15 Minutes drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img src="./Assets/Images/Hudsontown.png" alt="Hudsontown" />
+                  <h5>Hudsontown</h5>
+                  <p>2 hours drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/Lake Marcelle.png"
+                    alt="Lake Marcelle"
+                  />
+                  <h5>Lake Marcelle</h5>
+                  <p>15 minutes drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/MacGyverton.png"
+                    alt="MacGyverton"
+                  />
+                  <h5>MacGyverton</h5>
+                  <p>2 hours drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/North Justen.png"
+                    alt="North Justen"
+                  />
+                  <h5>North Justen</h5>
+                  <p>15 minutes drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/Port Elyseberg.png"
+                    alt="Port Elyseberg"
+                  />
+                  <h5>Port Elyseberg</h5>
+                  <p>2 hours drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/Danielmouth.png"
+                    alt="Danielmouth"
+                  />
+                  <h5>Danielmouth</h5>
+                  <p>15 minutes drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img src="./Assets/Images/Hudsontown.png" alt="Hudsontown" />
+                  <h5>Hudsontown</h5>
+                  <p>2 hours drive</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>1480</span>
+                  <img
+                    src="./Assets/Images/North Justen.png"
+                    alt="North Justen"
+                  />
+                  <h5>North Justen</h5>
+                  <p>15 minutes drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-listing">
+            <div class="swiper-button-pre">
+              <img src="./Assets/svgs/arrow-left.svg" alt="" />
+            </div>
+            <div class="swiper-button-nex">
+              <img src="./Assets/svgs/arrow-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/Thompsonbury.png" alt="Thompsonbury" />
+            <h5>Thompsonbury</h5>
+            <p>15 Minutes drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/Hudsontown.png" alt="Hudsontown" />
+            <h5>Hudsontown</h5>
+            <p>2 hours drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/Lake Marcelle.png" alt="Lake Marcelle" />
+            <h5>Lake Marcelle</h5>
+            <p>15 minutes drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/MacGyverton.png" alt="MacGyverton" />
+            <h5>MacGyverton</h5>
+            <p>2 hours drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/North Justen.png" alt="North Justen" />
+            <h5>North Justen</h5>
+            <p>15 minutes drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img
+              src="./Assets/Images/Port Elyseberg.png"
+              alt="Port Elyseberg"
+            />
+            <h5>Port Elyseberg</h5>
+            <p>2 hours drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/Danielmouth.png" alt="Danielmouth" />
+            <h5>Danielmouth</h5>
+            <p>15 minutes drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/Hudsontown.png" alt="Hudsontown" />
+            <h5>Hudsontown</h5>
+            <p>2 hours drive</p>
+          </div>
+          <div class="slide">
+            <span>1480</span>
+            <img src="./Assets/Images/North Justen.png" alt="North Justen" />
+            <h5>North Justen</h5>
+            <p>15 minutes drive</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="best-host">
+      <h4>
+        Best hosts of the
+        <span
+          >month <img src="./Assets/svgs/arrow-down.svg" alt="arrow down"
+        /></span>
+      </h4>
+      <div class="input-wrapper">
+        <input type="button" value="Month" />
+        <img src="./Assets/svgs/dropdown.svg" alt="dropdown" />
+      </div>
+      <div class="card-listing">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/blue.png" alt="nature house" />
+                  <h5>Antonie Heller</h5>
+                  <p>Gaylordside</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/white.png" alt="nature house" />
+                  <h5>Antonie Heller</h5>
+                  <p>Gaylordside</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/brown.png" alt="nature house" />
+                  <h5>Antonie Heller</h5>
+                  <p>Gaylordside</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <img src="./Assets/Images/pink.png" alt="nature house" />
+                  <h5>Antonie Heller</h5>
+                  <p>Gaylordside</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-listing">
+            <div class="swiper-button-pre">
+              <img src="./Assets/svgs/arrow-left.svg" alt="" />
+            </div>
+            <div class="swiper-button-nex">
+              <img src="./Assets/svgs/arrow-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="book-ticket">
+      <div class="content">
+        <p>fleet travel ui kit</p>
+        <div class="listing">
+          <h2>Book a ticket and just leave</h2>
+          <button type="button">Book now</button>
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <div class="image"></div>
+        <img src="./Assets/svgs/play-button.svg" alt="play button" />
+      </div>
+    </div>
+    <div class="categories">
+      <h2>Browse by Category</h2>
+      <p>Let’s go on an adventure</p>
+      <div class="card-listing">
+        <div class="container">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>256.356</span>
+                  <img src="./Assets/svgs/house.svg" alt="Thompsonbury" />
+                  <h5>City House</h5>
+                  <p>Small description</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>256.356</span>
+                  <img src="./Assets/svgs/house.svg" alt="Thompsonbury" />
+                  <h5>City House</h5>
+                  <p>Small description</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>256.356</span>
+                  <img src="./Assets/svgs/house.svg" alt="Thompsonbury" />
+                  <h5>City House</h5>
+                  <p>Small description</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>256.356</span>
+                  <img src="./Assets/svgs/house.svg" alt="Thompsonbury" />
+                  <h5>City House</h5>
+                  <p>Small description</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <span>256.356</span>
+                  <img src="./Assets/svgs/house.svg" alt="Thompsonbury" />
+                  <h5>City House</h5>
+                  <p>Small description</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-listing">
+            <div class="swiper-button-pre">
+              <img src="./Assets/svgs/arrow-left.svg" alt="" />
+            </div>
+            <div class="swiper-button-nex">
+              <img src="./Assets/svgs/arrow-right.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-listing">
+        <div class="image-wrapper">
+          <img src="./Assets/svgs/logo.svg" alt="logo" />
+        </div>
+        <div class="menu-listing">
+          <ul class="main-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">What We Do</a></li>
+          </ul>
+          <ul class="footer-menu">
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Downloads</a></li>
+          </ul>
+          <ul class="about-us">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+          </ul>
+          <ul class="press">
+            <li><a href="#">What to do</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+          <ul class="downloads">
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">downloads</a></li>
+          </ul>
+        </div>
+        <div class="mail-form">
+          <h6>Join Our Community</h6>
+          <div class="input-wrapper">
+            <input type="email" placeholder="Enter your phone number" />
+            <img src="./Assets/svgs/right-pointer.svg" alt="right-pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="copyright-bar">
+        <p>Copyright © 2021 UI8 LLC. All rights reserved</p>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

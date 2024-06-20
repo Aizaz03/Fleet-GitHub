@@ -3,20 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: $primaryColor;
 }
-
 .header {
   @include flex(space-between, center, 0.625rem);
-  margin: 2.25rem 2rem;
+  margin: 2.25rem auto;
+  max-width: 19.4375rem;
+  width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    margin: 1.5rem 5rem;
+  @media screen and (min-width: 48rem) {
+    max-width: 44.9375rem;
+  }
+  @media screen and (min-width: 64rem) {
+    margin: 1.5rem auto;
+    max-width: 53.1rem;
   }
   @media screen and (min-width: 90rem) {
-    margin: 1.5rem 10rem;
+    margin: 1.5rem auto;
+
+    max-width: 70rem;
   }
 
   .image-wrapper {
@@ -249,7 +255,7 @@ body {
         cursor: pointer;
         transition: background-color 0.3s;
         @include font-styles($primaryGrey, 0.875rem, 700, 1rem, center, 0);
-        font-family: "DM Sans", "san-serif";
+        font-family: "DM Sans", "sans-serif";
       }
 
       .tab-content {
@@ -350,77 +356,1721 @@ body {
     margin-top: 7.5rem;
   }
   h2 {
-    font-family: "DM Sans", "san-serif";
+    font-family: "DM Sans", "sans-serif";
   }
   p {
     @include font-styles($primaryGrey, 1rem, 400, 1.5rem, center, 0);
-    font-family: "poppins", "san-serif";
+    font-family: "poppins", "sans-serif";
     margin-top: 0.75rem;
   }
   .adventure-listing {
     margin-top: 2rem;
-    swiper-container {
+
+    @media screen and (min-width: 64rem) {
+      margin-left: 5rem;
+    }
+    @media screen and (min-width: 90rem) {
+      margin: 2rem auto;
+      max-width: 70rem;
       width: 100%;
+    }
+    html,
+    body {
+      position: relative;
       height: 100%;
     }
+    .container {
+      margin: 0 auto;
+      height: 100%;
 
-    swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .swiper-container {
+        width: 100%;
+        height: 100%;
 
-      .adventure {
-        @include flex(start, center, 1.5625rem);
-        padding: 1rem;
-        margin-left: 0.75rem;
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
 
-        img {
-          height: 5.25rem;
-          width: 5.75rem;
-        }
-        .content {
-          @include flex(start, start, 0.5rem, column);
-          h5 {
-            font-family: "poppins", "san-serif";
+          /* Center slide text vertically */
+          // display: -webkit-box;
+          // display: -ms-flexbox;
+          // display: -webkit-flex;
+          // display: flex;
+          // -webkit-box-pack: center;
+          // -ms-flex-pack: center;
+          // -webkit-justify-content: center;
+          // justify-content: center;
+          // -webkit-box-align: center;
+          // -ms-flex-align: center;
+          // -webkit-align-items: center;
+          // align-items: center;
+          width: 18.25rem !important;
+
+          @media screen and (min-width: 48rem) {
+            width: 20rem !important;
           }
+          @media screen and (min-width: 64rem) {
+            width: 22rem !important;
+          }
+
+          .adventure {
+            @include flex(start, center, 1.5625rem);
+            padding: 1rem;
+            margin-left: 0.75rem;
+            // width: 18.25rem;
+
+            img {
+              height: 5.25rem;
+              width: 5.75rem;
+            }
+            .content {
+              @include flex(start, start, 0.5rem, column);
+              h5 {
+                font-family: "poppins", "sans-serif";
+              }
+              span {
+                font-family: "poppins", "sans-serif";
+                background-color: $lightGrey;
+                padding: 0.5rem 0.8938rem 0.375rem;
+                border-radius: 2rem;
+                @include font-styles(
+                  $secondaryTextColor,
+                  0.75rem,
+                  700,
+                  0.75rem,
+                  left,
+                  0
+                );
+              }
+            }
+          }
+        }
+        .button-listing {
+          margin-top: 2rem;
+          @include flex(center, center, 0.5rem);
+          .swiper-button-pre,
+          .swiper-button-nex {
+            img {
+              padding: 0.9375rem 0.8125rem;
+              &:hover {
+                border: 0.125rem solid $lightGrey;
+                border-radius: 50%;
+              }
+            }
+          }
+          @media screen and (min-width: 64rem) {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+.memories-section {
+  margin: 4rem 2rem;
+  @media screen and (min-width: 64rem) {
+    margin: 7rem 5rem;
+  }
+  h2 {
+    color: $textColor;
+    text-align: left;
+    font-family: "DM Sans", "sans-serif";
+
+    @media screen and (min-width: 48rem) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 64rem) {
+      width: 39.875rem;
+      margin: 0 auto;
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  p {
+    @include font-styles($primaryGrey, 1rem, 400, 1.5rem, left, 0);
+    margin-top: 0.75rem;
+    font-family: "poppins", "sans-serif";
+    @media screen and (min-width: 48rem) {
+      text-align: center;
+    }
+    @media screen and (min-width: 64rem) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      letter-spacing: -1%;
+    }
+  }
+  .memories {
+    @include flex(start, start, 4rem, column);
+    @media screen and (min-width: 48rem) {
+      @include flex(center, center, 0);
+      margin-top: 3rem;
+    }
+    @media screen and (min-width: 64rem) {
+      @include flex(start, start, 8rem);
+      margin: 5rem auto;
+      max-width: 53.875rem;
+    }
+    @media screen and (min-width: 90rem) {
+      @include flex(start, center, 17.125rem);
+      margin: 5rem auto;
+      max-width: 70rem;
+    }
+
+    .content-listing {
+      margin-right: 24px;
+      @include flex(start, start, 2.5rem, column);
+      @media screen and (min-width: 64rem) {
+        margin-top: 0;
+      }
+      @media screen and (min-width: 64rem) {
+        margin-right: 0;
+        width: 17.625rem;
+      }
+      @media screen and (min-width: 90rem) {
+        width: 22rem;
+      }
+
+      .content {
+        @include flex(start, start, 1rem, column);
+        &:nth-child(1) {
           span {
-            font-family: "poppins", "san-serif";
-            background-color: $lightGrey;
-            padding: 0.5rem 0.8938rem 0.375rem;
-            border-radius: 2rem;
-            @include font-styles(
-              $secondaryTextColor,
-              0.75rem,
-              700,
-              0.75rem,
-              left,
-              0
-            );
+            background-color: $colorLightBlue;
+          }
+        }
+        &:nth-child(2) {
+          span {
+            background-color: $bgBlueColor;
+          }
+        }
+        &:nth-child(3) {
+          span {
+            background-color: $bgGreenColor;
+          }
+        }
+        span {
+          padding: 0.125rem 0.75rem;
+          @include font-styles(
+            $primaryColor,
+            0.875rem,
+            500,
+            1.25rem,
+            center,
+            0
+          );
+          font-family: "poppins", "sans-serif";
+          border-radius: 100px;
+        }
+        h3 {
+          margin-top: 0.5rem;
+          color: $textColor;
+          font-family: "poppins", "sans-serif";
+        }
+        p {
+          @include font-styles($primaryGrey, 0.875rem, 400, 1.5rem, left, 0);
+          font-family: "poppins", "sans-serif";
+        }
+      }
+      button {
+        @include font-styles($primaryColor, 1rem, 700, 1rem, center, 0);
+        font-family: "DM Sans", "snas-serif";
+        padding: 16px 23px;
+        border-radius: 90px;
+        background-color: $buttonBgColor;
+        border: none;
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+      > img {
+        width: 19.375rem;
+        height: 38.1875rem;
+        border-radius: 2rem;
+
+        @media screen and (min-width: 64rem) {
+          width: 28.375rem;
+          height: 700px;
+        }
+      }
+      .slider-controls {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        img {
+          padding: 0.9375rem 0.8125rem;
+
+          &:hover {
+            border: 0.125rem solid $lightGrey;
+            border-radius: 50%;
+          }
+        }
+      }
+      .label-listing {
+        .label {
+          width: 16.4375rem;
+          position: absolute;
+          padding: 1rem 2rem 1rem 1rem;
+          background: $labelGradient;
+          border-radius: 80px;
+          @include flex(start, center, 1rem);
+          > img {
+            height: 3rem;
+            border-radius: 5rem;
+            width: 3rem;
+          }
+          .content {
+            h6 {
+              font-family: "Poppins", "sans-serif";
+              color: $textColor;
+            }
+            p {
+              @include font-styles($textColor, 0.75rem, 600, 1.25rem, left, 0);
+              font-family: "Poppins", "sans-serif";
+              @include flex(start, center, 0.25rem);
+              box-shadow: 0px 40px 64px -32px $shadowColor;
+
+              img {
+                height: 0.75rem;
+                width: 0.75rem;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            bottom: 1.5rem;
+            right: 1.5rem;
+
+            @media screen and (min-width: 64rem) {
+              bottom: 2.9375rem;
+              left: 6.1875rem;
+            }
+            @media screen and (min-width: 90rem) {
+              bottom: 7.5625rem;
+              left: -9.125rem;
+            }
+          }
+          &:nth-child(2) {
+            display: none;
+
+            @media screen and (min-width: 64rem) {
+              display: flex;
+              top: 16.875rem;
+              left: -2.625rem;
+              box-shadow: 0px 40px 64px -32px $shadowColor;
+            }
+            @media screen and (min-width: 64rem) {
+              top: 273px;
+              left: -5.125rem;
+            }
+          }
+          &:nth-child(3) {
+            display: none;
+
+            @media screen and (min-width: 64rem) {
+              display: flex;
+              bottom: 13rem;
+              right: -2.5rem;
+              box-shadow: 0px 40px 64px -32px $shadowColor;
+            }
+            @media screen and (min-width: 64rem) {
+              bottom: 17.625rem;
+              right: -4.9375rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.travel-tips {
+  margin: 0 2rem 7rem;
+
+  @media screen and (min-width: 64rem) {
+    margin: 0 5rem 7rem;
+  }
+  @media screen and (min-width: 90rem) {
+    margin: 0 13rem 8.5rem;
+  }
+  h2 {
+    color: $textColor;
+    font-family: "DM Sans", "sans-serif";
+
+    @media screen and (min-width: 64rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      letter-spacing: -2%;
+    }
+  }
+  > p {
+    @include font-styles($primaryGrey, 1rem, 400, 1.5rem, center, 0);
+    font-family: "poppins", "sans-serif";
+
+    @media screen and (min-width: 64rem) {
+      font-size: 24px;
+      line-height: 2rem;
+      letter-spacing: -2%;
+      margin-top: 12px;
+    }
+  }
+  .tips-listing {
+    margin-top: 2rem;
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 64rem) {
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    @media screen and (min-width: 90rem) {
+      gap: 8rem;
+    }
+    .tips {
+      @include flex(start, center, 8px, column);
+      width: 16rem;
+      margin: 0 auto;
+      img {
+        width: 16rem;
+        height: 14.375rem;
+      }
+      h3 {
+        margin-top: 1.5rem;
+        font-family: "poppins", "sans-serif";
+        color: $textColor;
+        text-align: center;
+      }
+      p {
+        @include font-styles($primaryGrey, 0.875rem, 400, 1.5rem, center, 0);
+        font-family: "poppins", "sans-serif";
+      }
+    }
+  }
+}
+.calm-journey {
+  @media screen and (min-width: 48rem) {
+    max-width: 47.5rem;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 64rem) {
+    max-width: 54rem;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+  h2 {
+    color: $textColor;
+    font-family: "DM Sans", "sans-serif";
+
+    @media screen and (min-width: 64rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    @media screen and (min-width: 90rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  > p {
+    @include font-styles($primaryParagraph, 16px, 400, 24px, center, 0);
+    font-family: "poppins", "sans-serif";
+    margin-top: 0.75rem;
+    @media screen and (min-width: 90rem) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  .listing {
+    margin-top: 4rem;
+    margin-left: 2rem;
+
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+
+          /* Center slide text vertically */
+          // display: -webkit-box;
+          // display: -ms-flexbox;
+          // display: -webkit-flex;
+          // display: flex;
+          // -webkit-box-pack: center;
+          // -ms-flex-pack: center;
+          // -webkit-justify-content: center;
+          // justify-content: center;
+          // -webkit-box-align: center;
+          // -ms-flex-align: center;
+          // -webkit-align-items: center;
+          // align-items: center;
+          width: 19.4375rem !important;
+
+          @media screen and (min-width: 48rem) {
+            width: 14.625rem !important;
+          }
+          @media screen and (min-width: 64rem) {
+            width: 16.625rem !important;
+          }
+          @media screen and (min-width: 90rem) {
+            width: 22rem !important;
+          }
+
+          .slide {
+            img {
+              border-radius: 16px;
+            }
+            h5 {
+              font-family: "DM Sans", "sans-serif";
+              color: $textColor;
+              text-align: center;
+              margin-top: 1.5rem;
+            }
+            p {
+              margin-top: 0.5rem;
+              font-family: "poppins", "sans-serif";
+              @include font-styles(
+                $primaryGrey,
+                0.875rem,
+                400,
+                1.5rem,
+                center,
+                0
+              );
+            }
+          }
+        }
+        .button-listing {
+          margin-top: 2rem;
+          @include flex(center, center, 0.5rem);
+          .swiper-button-pre,
+          .swiper-button-nex {
+            img {
+              padding: 0.9375rem 0.8125rem;
+              &:hover {
+                border: 0.125rem solid $lightGrey;
+                border-radius: 50%;
+              }
+            }
+          }
+          @media screen and (min-width: 64rem) {
+            margin-top: 3rem;
+            display: none;
           }
         }
       }
     }
 
-    swiper-slide img {
+    .swiper-slide img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+  }
+  .input-wrapper {
+    @include flex(center, center, 0);
+    margin: 2.5rem 0 0 2rem;
 
-    swiper-slide {
-      width: 80%;
+    .input-button {
+      border: 0.0625rem solid $lightGrey;
+      @include flex(start, center, 0.75rem);
+      padding: 0.75rem 1rem;
+      border-radius: 90px;
+      width: 8.25rem;
+      cursor: pointer;
+      input {
+        background: transparent;
+        border: none;
+        @include font-styles($textColor, 0.875rem, 700, 1rem, center, 0);
+      }
+    }
+  }
+}
+.tour {
+  margin-top: 4rem;
+  padding: 4rem 2rem 3rem;
+  background: $bgCardColor;
+
+  @media screen and (min-width: 64rem) {
+    max-width: 59rem;
+    margin: 5rem auto 0;
+    border-radius: 24px;
+    padding: 2.5rem 2.5rem 3rem;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 80rem;
+    margin: 8.5rem auto 0;
+    border-radius: 24px;
+    padding: 5rem 5rem 4rem;
+  }
+  h2 {
+    font-family: "DM Sans", "sans-serif";
+    color: $textColor;
+    text-align: left;
+    @media screen and (min-width: 64rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  > p {
+    @include font-styles($primaryGrey, 1rem, 400, 1.5rem, left, 0);
+    font-family: "poppins", "sans-serif";
+    margin-top: 0.75rem;
+    @media screen and (min-width: 64rem) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  .menu {
+    display: none;
+    @media screen and (min-width: 64rem) {
+      @include flex(space-between, center, 10px);
+      margin: 3rem 0;
+      ul {
+        @include flex(start, center, 1rem);
+        li {
+          list-style: none;
+          @include flex(start, center, 0.5rem);
+          padding: 0.375rem 0.75rem;
+
+          &:hover {
+            background: $textColor;
+            border-radius: 20px;
+            a {
+              color: $primaryColor;
+            }
+            svg {
+              color: $primaryColor;
+            }
+          }
+          svg {
+            height: 1rem;
+            width: 1rem;
+            color: $primaryGrey;
+          }
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .input-wrapper {
+        @include flex(space-between, center, 0.3125rem);
+        background-color: $primaryColor;
+        border-radius: 12px;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        max-width: 16rem;
+        width: 100%;
+        input {
+          background: transparent;
+          border: none;
+          @include font-styles($textColor, 0.875rem, 500, 1.5rem, start, 0);
+          font-family: "poppins", sans-serif;
+        }
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+  .button-listing {
+    margin: 3rem 0;
+    @include flex(start, start, 1rem, column);
+
+    @media screen and (min-width: 64rem) {
+      display: none;
+    }
+    .input-wrapper {
+      @include flex(space-between, center, 0.3125rem);
+      background-color: $primaryColor;
+      border-radius: 12px;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+      width: 100%;
+      input {
+        background: transparent;
+        border: none;
+        @include font-styles($textColor, 0.875rem, 500, 1.5rem, start, 0);
+        font-family: "poppins", sans-serif;
+      }
+      img {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+  .places-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(311px, auto));
+    gap: 2rem;
+
+    @media screen and (min-width: 64rem) {
+      grid-template-columns: repeat(auto-fill, minmax(266px, auto));
+    }
+    @media screen and (min-width: 90rem) {
+      grid-template-columns: repeat(auto-fill, minmax(256px, auto));
+    }
+    .place {
+      background: $primaryColor;
+      border-radius: 1rem;
+      height: auto;
+
+      &:nth-child(7) {
+        display: none;
+      }
+      &:nth-child(8) {
+        display: none;
+      }
+
+      @media screen and (min-width: 90rem) {
+        &:nth-child(7) {
+          display: block;
+        }
+        &:nth-child(8) {
+          display: block;
+        }
+      }
+      .image-wrapper {
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem 1rem 0 0;
+        }
+      }
+      .content {
+        margin: 1.25rem 1.25rem 1rem;
+        @include flex(space-between, center, 0.625rem);
+        .name {
+          h5 {
+            font-family: "DM Sans", "sans-serif";
+            color: $textColor;
+          }
+          p {
+            @include font-styles(
+              $primaryParagraph,
+              0.75rem,
+              400,
+              1.25rem,
+              left,
+              0
+            );
+            font-family: "poppins", "sans-serif";
+          }
+        }
+        .price {
+          @include flex(center, center, 0.375rem, column);
+          padding: 7px;
+          border: 0.125rem solid $bgGreenColor;
+          border-radius: 4px;
+          del {
+            @include font-styles(
+              $primaryGrey,
+              0.75rem,
+              700,
+              0.75rem,
+              center,
+              0
+            );
+            font-family: "poppins", "sans-serif";
+          }
+          span {
+            font-family: "poppins", "sans-serif";
+            @include font-styles(
+              $bgGreenColor,
+              0.75rem,
+              700,
+              0.75rem,
+              center,
+              0
+            );
+          }
+        }
+      }
+      hr {
+        margin: 0 1.25rem;
+        color: $lightGrey;
+      }
+      .details {
+        padding: 1rem 1.25rem;
+        @include flex(space-between, center, 0.625rem);
+
+        h6 {
+          @include font-styles($primaryGrey, 0.75rem, 400, 1.25rem, start, 0);
+          font-family: "poppins", "sans-serif";
+        }
+        p {
+          @include flex(start, center, 4px);
+          @include font-styles($textColor, 0.75rem, 600, 1.25rem, end, 0);
+          font-family: "poppins", "sans-serif";
+        }
+      }
+    }
+  }
+  .button-wrapper {
+    @include flex(center, center, 0);
+    margin-top: 3rem;
+    @media screen and (min-width: 90rem) {
+      margin-top: 4rem;
+    }
+    button {
+      @include font-styles($textColor, 0.875rem, 700, 1rem, center, 0);
+      font-family: "DM Sans", "sans-serif";
+      padding: 0.75rem 1rem;
+      border: 0.125rem solid $lightGrey;
+      border-radius: 90px;
+      background-color: transparent;
+    }
+  }
+}
+.travel-memories {
+  @include flex(start, center, 0, column);
+  @media screen and (min-width: 48rem) {
+    @include flex(start, center, 0);
+  }
+  @media screen and (min-width: 64rem) {
+    @include flex(start, center, 0);
+    margin: 5rem 0 5rem 5rem;
+    padding: 2.25rem 0;
+  }
+  @media screen and (min-width: 90rem) {
+    @include flex(start, center, 2rem);
+    margin: 5rem auto;
+    padding: 2.25rem 0;
+    max-width: 70rem;
+  }
+  .content {
+    padding: 4rem 2rem 0;
+
+    @media screen and (min-width: 48rem) {
+      flex: 0 0 31.25rem;
+    }
+    @media screen and (min-width: 64rem) {
+      flex: 0 0 28rem;
+    }
+    span {
+      @include font-styles($primaryGrey, 0.75rem, 700, 0.75rem, start, 0);
+      font-family: "poppins", "sans-serif";
+    }
+    h2 {
+      margin-top: 1rem;
+      text-align: left;
+      font-family: "DM Sans", "sans-serif";
+      letter-spacing: 0.02em;
+
+      @media screen and (min-width: 64rem) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
+    p {
+      margin-top: 2rem;
+      @include font-styles($primaryGrey, 1rem, 400, 1.5rem, start, 0);
+      font-family: "poppins", "sans-serif";
+    }
+    .input-wrapper {
+      margin-top: 2.5rem;
+      @include flex(space-between, center, 0.3125rem);
+      padding: 6px 0.5rem 6px 1rem;
+      border: 0.125rem solid $lightGrey;
+      border-radius: 5.625rem;
+      @media screen and (min-width: 64rem) {
+        width: 18.75rem;
+      }
+      input {
+        background: none;
+        border: none;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          @include font-styles($primaryGrey, 0.875rem, 400, 1.5rem, start, 0);
+          font-family: "poppins", "sans-serif";
+        }
+      }
+      img {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+  .img-wrapper {
+    display: none;
+    @media screen and (min-width: 64rem) {
+      display: flex;
+      width: 35.75rem;
+      height: 37.8125rem;
+      overflow: hidden;
+    }
+    @media screen and (min-width: 90rem) {
+      width: 40rem;
+      height: 42.25rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .image-wrapper {
+    margin-top: 48px;
+    width: 23.4375rem;
+    height: 27.8125rem;
+
+    @media screen and (min-width: 48rem) {
+      flex: 1;
+    }
+    @media screen and (min-width: 64rem) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.select-property {
+  margin-top: 64px;
+  position: relative;
+  padding: 4rem 0 64px 32px;
+  @media screen and (min-width: 1024px) {
+    padding: 4rem 0 4rem 5rem;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 5rem 10rem 3.5rem;
+  }
+  h2 {
+    font-family: "DM Sans", "sans-serif";
+    text-align: left;
+    @media screen and (min-width: 64rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  p {
+    @include font-styles($primaryGrey, 1rem, 400, 1.5rem, left, 0);
+    font-family: "poppins", "sans-serif";
+    margin-top: 0.75rem;
+    @media screen and (min-width: 64rem) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  .card-listing {
+    margin-top: 2.5rem;
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          width: 17.375rem !important;
+
+          @media screen and (min-width: 48rem) {
+            width: 14.625rem !important;
+          }
+          @media screen and (min-width: 64rem) {
+            width: 14.75rem !important;
+            margin-right: 2rem !important;
+            &:nth-child(1) {
+              margin-right: 0 !important;
+            }
+          }
+          @media screen and (min-width: 90rem) {
+            width: 16rem !important;
+          }
+
+          .slide {
+            .image-wrapper {
+              width: 100%;
+              height: 16rem;
+              position: relative;
+              img {
+                border-radius: 16px;
+                height: 100%;
+                width: 100%;
+              }
+              span {
+                @include font-styles(
+                  $primaryColor,
+                  0.75rem,
+                  700,
+                  0.75rem,
+                  center,
+                  0
+                );
+                font-family: "poppins", "sans-serif";
+                padding: 0.5rem 0.75rem;
+                border-radius: 2rem;
+                background: $textColor;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+              }
+            }
+            h5 {
+              font-family: "poppins", "sans-serif";
+              color: $textColor;
+              text-align: left;
+              margin-top: 1.3125rem;
+            }
+            p {
+              @include flex(start, center, 6px);
+              margin-top: 0.5rem;
+              font-family: "poppins", "sans-serif";
+              @include font-styles($primaryGrey, 0.75rem, 600, 20px, left, 0);
+              img {
+                height: 1rem;
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .button-listing {
+      margin-top: 2rem;
+      @include flex(start, center, 0.5rem);
+      .swiper-button-pre,
+      .swiper-button-nex {
+        img {
+          padding: 0.9375rem 0.8125rem;
+          &:hover {
+            border: 0.125rem solid $lightGrey;
+            border-radius: 50%;
+          }
+        }
+      }
+      @media screen and (min-width: 64rem) {
+        position: absolute;
+        top: 2.375rem;
+        right: 5rem;
+      }
+      @media screen and (min-width: 90rem) {
+        right: 168px;
+        top: 56px;
+      }
     }
 
-    swiper-slide:nth-child(2n) {
-      width: 60%;
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.nearby-places {
+  background-color: $bgCardColor;
+  padding: 64px 0 64px 32px;
+  @media screen and (min-width: 64rem) {
+    max-width: 944px;
+    margin: 40px auto;
+    width: 100%;
+    border-radius: 0.875rem;
+    padding: 80px 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1280px;
+    margin-top: 80px;
+  }
+  h2 {
+    font-family: "DM Sans", "sans-serif";
+    text-align: center;
+    @media screen and (min-width: 64rem) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+  > p {
+    @include font-styles($primaryGrey, 1rem, 400, 1.5rem, center, 0);
+    font-family: "poppins", "sans-serif";
+    margin-top: 0.75rem;
+    @media screen and (min-width: 64rem) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+  .card-listing {
+    margin-top: 2.5rem;
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      height: 100%;
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          width: 13.75rem !important;
+          &:nth-child(8) {
+            display: none;
+          }
+          &:nth-child(9) {
+            display: none;
+          }
+
+          @media screen and (min-width: 48rem) {
+            width: 14.625rem !important;
+          }
+          @media screen and (min-width: 64rem) {
+            width: 14.75rem !important;
+            margin-right: 2rem !important;
+            &:nth-child(1) {
+              margin-right: 0 !important;
+            }
+          }
+          @media screen and (min-width: 90rem) {
+            width: 16rem !important;
+          }
+
+          .slide {
+            background-color: $primaryColor;
+            padding: 8px 8px 51px;
+            border-radius: 1rem;
+
+            span {
+              @include flex(start, center, 0);
+              width: 53px;
+              @include font-styles($primaryGrey, 12px, 700, 12px, center, 0);
+              font-family: "poppins", "sans-serif";
+              padding: 8px 12px;
+              border-radius: 2rem;
+              background: $bgCardColor;
+            }
+            img {
+              margin: 1rem auto;
+              height: 80px;
+              width: 80px;
+            }
+            h5 {
+              font-family: "poppins", "sans-serif";
+              color: $textColor;
+              text-align: center;
+              margin-top: 1.3125rem;
+            }
+            p {
+              margin-top: 0.5rem;
+              font-family: "poppins", "sans-serif";
+              @include font-styles($primaryGrey, 0.75rem, 600, 20px, center, 0);
+            }
+          }
+        }
+      }
+    }
+    .listing {
+      display: none;
+
+      @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 64px 32px;
+        .slide {
+          background-color: $primaryColor;
+          padding: 8px 8px 26px;
+          border-radius: 1rem;
+          width: 11.25rem;
+
+          &:nth-child(8) {
+            display: none;
+            @media screen and (min-width: 1440px) {
+              display: block;
+            }
+          }
+          &:nth-child(9) {
+            display: none;
+            @media screen and (min-width: 1440px) {
+              display: block;
+            }
+          }
+
+          span {
+            @include flex(start, center, 0);
+            width: 53px;
+            @include font-styles($primaryGrey, 12px, 700, 12px, center, 0);
+            font-family: "poppins", "sans-serif";
+            padding: 8px 12px;
+            border-radius: 2rem;
+            background: $bgCardColor;
+          }
+          img {
+            margin: 1rem auto;
+            height: 80px;
+            width: 80px;
+            display: flex;
+          }
+          h5 {
+            font-family: "poppins", "sans-serif";
+            color: $textColor;
+            text-align: center;
+          }
+          p {
+            font-family: "poppins", "sans-serif";
+            @include font-styles($primaryGrey, 0.75rem, 600, 20px, center, 0);
+          }
+        }
+      }
+    }
+    .button-listing {
+      margin-top: 2rem;
+      @include flex(center, center, 0.5rem);
+      .swiper-button-pre,
+      .swiper-button-nex {
+        img {
+          padding: 0.9375rem 0.8125rem;
+          &:hover {
+            border: 0.125rem solid $lightGrey;
+            border-radius: 50%;
+          }
+        }
+      }
+      @media screen and (min-width: 64rem) {
+        position: absolute;
+        top: 2.375rem;
+        right: 5rem;
+      }
+      @media screen and (min-width: 90rem) {
+        right: 168px;
+        top: 56px;
+      }
     }
 
-    swiper-slide:nth-child(3n) {
-      width: 40%;
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.best-host {
+  background: $lightTextColor;
+  padding: 64px 0 64px 32px;
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    max-width: 864px;
+    width: 100%;
+    margin: 0 auto;
+    background: none;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 70rem;
+  }
+  h4 {
+    font-family: "DM Sans", "sans-serif";
+    @include flex(start, center, 10px);
+
+    @media screen and (min-width: 1024px) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+    span {
+      color: $buttonBgColor;
+      display: flex;
+      img {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+          display: block;
+        }
+      }
+    }
+  }
+  .input-wrapper {
+    margin-top: 1.5rem;
+    @include flex(space-between, center, 0.3125rem);
+    background-color: transparent;
+    border: 0.0625rem solid $lightGrey;
+    border-radius: 12px;
+    padding: 7px 8px 7px 1rem;
+    width: 100%;
+    max-width: 311px;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+    input {
+      background: transparent;
+      border: none;
+      @include font-styles($textColor, 0.875rem, 500, 1.5rem, start, 0);
+      font-family: "poppins", sans-serif;
+    }
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+  .card-listing {
+    margin-top: 40px;
+
+    @media screen and (min-width: 1024px) {
+      margin-top: 48px;
+    }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          width: 264px !important;
+
+          @media screen and (min-width: 48rem) {
+            width: 264px !important;
+          }
+          @media screen and (min-width: 64rem) {
+            width: 16.6875rem !important;
+            margin-right: 1.25rem !important;
+            &:nth-child(1) {
+              margin-right: 0 !important;
+            }
+          }
+          @media screen and (min-width: 90rem) {
+            width: 16rem !important;
+          }
+
+          .slide {
+            border: 1px solid $lightGrey;
+            border-radius: 1.6875rem;
+            @media screen and (min-width: 90rem) {
+              width: 16rem !important;
+            }
+            .image-wrapper {
+              width: 100%;
+              height: 16rem;
+              img {
+                border-radius: 16px;
+                height: 100%;
+                width: 100%;
+              }
+            }
+            h5 {
+              font-family: "poppins", "sans-serif";
+              color: $textColor;
+              text-align: center;
+              margin-top: 1.3125rem;
+            }
+            p {
+              font-family: "poppins", "sans-serif";
+              @include font-styles($primaryGrey, 0.75rem, 600, 20px, center, 0);
+              margin-bottom: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+    .button-listing {
+      margin-top: 2rem;
+      @include flex(start, center, 0.5rem);
+      .swiper-button-pre,
+      .swiper-button-nex {
+        img {
+          padding: 0.9375rem 0.8125rem;
+          &:hover {
+            border: 0.125rem solid $lightGrey;
+            border-radius: 50%;
+          }
+        }
+      }
+      @media screen and (min-width: 64rem) {
+        position: absolute;
+        top: 2.25rem;
+        right: 0.375rem;
+      }
+      @media screen and (min-width: 90rem) {
+        right: 0;
+        top: 56px;
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.book-ticket {
+  margin: 0 2.5rem 4rem;
+
+  @media screen and (min-width: 64rem) {
+    max-width: 944px;
+    margin: 0 auto 4rem;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 80rem;
+    margin: 0 auto 136px;
+  }
+  .content {
+    @media screen and (min-width: 90rem) {
+      max-width: 70rem;
+      margin: 0 auto;
+    }
+    p {
+      @include font-styles($primaryGrey, 0.75rem, 700, 0.75rem, left, 0);
+      font-family: "poppins", "sans-serif";
+    }
+    .listing {
+      @include flex(start, start, 16px, column);
+
+      @media screen and (min-width: 64rem) {
+        @include flex(space-between, end, 1rem);
+      }
+      h2 {
+        font-family: "DM Sans", "sans-serif";
+        margin-top: 1rem;
+        text-align: left;
+        @media screen and (min-width: 64rem) {
+          width: 18.75rem;
+        }
+      }
+      button {
+        @include font-styles($primaryColor, 1rem, 700, 1rem, center, 0);
+        font-family: "DM Sans", "sans-serif";
+        @include flex(center, center, 0);
+        background-color: $buttonBgColor;
+        border-radius: 90px;
+        border: none;
+        width: 18.4375rem;
+        height: 3rem;
+
+        @media screen and (min-width: 90rem) {
+          width: 7.6875rem;
+        }
+      }
+    }
+  }
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    @media screen and (min-width: 64rem) {
+      margin-top: 80px;
+    }
+
+    .image {
+      width: 100%;
+      height: 30rem;
+      border-radius: 16px;
+      background-image: url(../Assets/Images/landscape.png);
+      background-position: center;
+      background-size: cover;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+    }
+  }
+}
+.categories {
+  margin-left: 32px;
+
+  @media screen and (min-width: 64rem) {
+    margin-left: 5rem;
+  }
+
+  @media screen and (min-width: 90rem) {
+    margin-left: 160px;
+  }
+
+  h2 {
+    font-family: "DM Sans", "sans-serif";
+  }
+  p {
+    @include font-styles($primaryGrey, 16px, 400, 24px, center, 0);
+    font-family: "poppins", "sans-serif";
+    margin-top: 0.75rem;
+  }
+  .card-listing {
+    margin-top: 2.5rem;
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .container {
+      margin: 0 auto;
+      height: 100%;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          width: 16rem !important;
+
+          @media screen and (min-width: 64rem) {
+            margin-right: 2rem !important;
+          }
+          @media screen and (min-width: 90rem) {
+            width: 16rem !important;
+          }
+
+          .slide {
+            padding: 2rem;
+            border-radius: 24px;
+            border: 2px solid $lightGrey;
+
+            span {
+              @include flex(start, center, 0);
+              width: 73px;
+              @include font-styles($primaryGrey, 12px, 700, 12px, center, 0);
+              font-family: "poppins", "sans-serif";
+              padding: 8px 12px;
+              border-radius: 2rem;
+              background: $bgCardColor;
+            }
+            img {
+              margin-top: 60px;
+              height: 2rem;
+              width: 2rem;
+            }
+            h5 {
+              font-family: "poppins", "sans-serif";
+              color: $textColor;
+              text-align: left;
+              margin-top: 24px;
+            }
+            p {
+              margin-top: 4px;
+              font-family: "poppins", "sans-serif";
+              @include font-styles($primaryGrey, 0.75rem, 600, 20px, left, 0);
+            }
+          }
+        }
+      }
+    }
+    .button-listing {
+      margin-top: 2rem;
+      @include flex(center, center, 0.5rem);
+      .swiper-button-pre,
+      .swiper-button-nex {
+        img {
+          padding: 0.9375rem 0.8125rem;
+          &:hover {
+            border: 0.125rem solid $lightGrey;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+footer {
+  border-top: 0.0625rem solid $lightGrey;
+  margin-top: 4rem;
+  padding: 4rem 2rem 1.5rem;
+  @media screen and (min-width: 64rem) {
+    max-width: 54rem;
+    width: 100%;
+    margin: 4rem auto 0;
+    padding: 4rem 0 0 0;
+  }
+  @media screen and (min-width: 90rem) {
+    max-width: 70rem;
+  }
+  .footer-listing {
+    @include flex(start, start, 3rem, column);
+
+    @media screen and (min-width: 48rem) {
+      @include flex(start, start, 1rem);
+    }
+    @media screen and (min-width: 90rem) {
+      @include flex(space-between, start, 1rem);
+    }
+    .menu-listing {
+      @include flex(space-between, start, 10px);
+      width: 100%;
+
+      @media screen and (min-width: 48rem) {
+        @include flex(space-around, start, 1rem);
+      }
+      @media screen and (min-width: 64rem) {
+        @include flex(start, start, 2.75rem);
+        margin-left: 8.125rem;
+      }
+      @media screen and (min-width: 90rem) {
+        @include flex(space-evenly, start, 2.75rem);
+        margin-left: 0;
+      }
+      .main-menu {
+        @include flex(start, start, 32px, column);
+        @media screen and (min-width: 64rem) {
+          display: none;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+
+      .footer-menu {
+        @include flex(start, start, 32px, column);
+        @media screen and (min-width: 64rem) {
+          display: none;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .about-us {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .press {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+      .downloads {
+        @include flex(start, start, 32px, column);
+        display: none;
+        @media screen and (min-width: 64rem) {
+          display: flex;
+        }
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            @include font-styles($primaryGrey, 0.875rem, 700, 1rem, start, 0);
+            font-family: "DM Sans", "sans-serif";
+          }
+        }
+      }
+    }
+    .mail-form {
+      width: 100%;
+
+      @media screen and (min-width: 64rem) {
+        width: fit-content;
+      }
+
+      h6 {
+        @include font-styles($textColor, 0.75rem, 700, 0.75rem, start, 0);
+        font-family: "poppins", "sans-serif";
+      }
+      .input-wrapper {
+        margin-top: 16px;
+        @include flex(space-between, center, 0.3125rem);
+        padding: 6px 0.5rem 6px 1rem;
+        border: 0.125rem solid $lightGrey;
+        border-radius: 5.625rem;
+        width: 100%;
+        @media screen and (min-width: 64rem) {
+          width: 16rem;
+        }
+        input {
+          background: none;
+          border: none;
+          width: 100%;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            @include font-styles($primaryGrey, 0.875rem, 400, 1.5rem, start, 0);
+            font-family: "poppins", "sans-serif";
+          }
+        }
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+  }
+  .copyright-bar {
+    margin-top: 3rem;
+    p {
+      font-family: "poppins", "sans-serif";
+      @include font-styles($textColor, 0.75rem, 400, 20px, start, 0);
     }
   }
 }

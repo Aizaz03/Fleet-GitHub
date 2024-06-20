@@ -21,14 +21,28 @@ document.addEventListener("DOMContentLoaded", function () {
   contents[0].classList.add("content-active");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.25, // Default number of slides per view
-    spaceBetween: 30,
+$(document).ready(function () {
+  // Swiper: Slider
+  new Swiper(".swiper-container", {
     loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    nextButton: ".swiper-button-nex",
+    prevButton: ".swiper-button-pre",
+    slidesPerView: 3,
+    paginationClickable: true,
+    spaceBetween: 20,
+    // breakpoints: {
+    //   1920: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 10,
+    //   },
+    //   1024: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 10,
+    //   },
+    //   480: {
+    //     slidesPerView: 1.2,
+    //     spaceBetween: 10,
+    //   },
+    // },
   });
 });
