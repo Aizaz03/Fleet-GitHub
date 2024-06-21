@@ -23,26 +23,103 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
   // Swiper: Slider
+  new Swiper(".second-swiper-container", {
+    loop: true,
+    nextButton: ".swiper-button-nex",
+    prevButton: ".swiper-button-pre",
+    paginationClickable: true,
+    spaceBetween: 20,
+    slidesPerView: 4,
+    slidesToScroll: 1,
+    breakpoints: {
+      1440: {
+        slidesPerView: 4,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      375: {
+        slidesPerView: 1.2,
+        slidesToScroll: 1,
+        spaceBetween: 10,
+      },
+    },
+  });
+});
+$(document).ready(function () {
+  // Swiper: Slider
   new Swiper(".swiper-container", {
     loop: true,
     nextButton: ".swiper-button-nex",
     prevButton: ".swiper-button-pre",
-    slidesPerView: 3,
     paginationClickable: true,
     spaceBetween: 20,
-    // breakpoints: {
-    //   1920: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 10,
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 10,
-    //   },
-    //   480: {
-    //     slidesPerView: 1.2,
-    //     spaceBetween: 10,
-    //   },
-    // },
+    slidesPerView: 3,
+    slidesToScroll: 1,
+    breakpoints: {
+      1440: {
+        slidesPerView: 3,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      375: {
+        slidesPerView: 1.2,
+        slidesToScroll: 1,
+        spaceBetween: 10,
+      },
+    },
+  });
+});
+$(document).ready(function () {
+  // Swiper: Slider
+  new Swiper(".third-swiper-container", {
+    loop: true,
+    nextButton: ".swiper-button-nex",
+    prevButton: ".swiper-button-pre",
+    paginationClickable: true,
+    spaceBetween: 20,
+    slidesPerView: 4,
+    slidesToScroll: 1,
+    breakpoints: {
+      1440: {
+        slidesPerView: 4.7,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1.6,
+        slidesToScroll: 1,
+        spaceBetween: 20,
+      },
+      375: {
+        slidesPerView: 1.2,
+        slidesToScroll: 1,
+        spaceBetween: 10,
+      },
+    },
   });
 });
